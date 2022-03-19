@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75); /* Paragraphs*/
+  --very-light-gray: hsl(0, 0%, 95%); /* (background, headings, buttons) */
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  color: var(--transparent-white);
+}
+
+a{text-decoration: none;}
+
+/*Utility Classse*/
+.btn{
+  padding: 0.75rem 2rem;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 2rem;
+}
+
+.l-heading{
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+  margin: 1.3rem 0;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.lead{
+  color: var(--transparent-white);
+  margin-bottom: 5rem;
+}
+
+/* Main Container */
+
+#container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 950px;
+  margin: 0 auto;
+}
+
+/* CARD General Styling */
+#container img{
+  margin-top: 1.3rem;
+}
+/* Orange BOX */
+.box-orange{
+  background: var(--bright-orange);
+  padding: 20px 50px;
+  border-radius: 10px 0 0 10px;
+}
+.box-orange .btn{color: var(--bright-orange);}
+.box-orange .btn:hover{
+  background: transparent;
+  cursor: pointer;
+  border: 1px solid var(--very-light-gray);
+  padding-top: 10px;
+  color: var(--very-light-gray);
+}
+
+/* Cyan BOX */
+
+.box-cyan{
+  background: var(--dark-cyan);
+  padding: 20px 50px;
+}
+.box-cyan .btn{color: var(--dark-cyan);}
+.box-cyan .btn:hover{
+  background: transparent;
+  cursor: pointer;
+  border: 1px solid var(--very-light-gray);
+  padding-top: 10px;
+  color: var(--very-light-gray);
+}
+
+/* Dark Cyan BOX */
+
+.box-dark-cyan{
+  background: var(--very-dark-cyan);
+  padding: 20px 50px;
+  border-radius: 0 10px 10px 0;
+}
+.box-dark-cyan .btn{color: var(--very-dark-cyan);}
+.box-dark-cyan .btn:hover{
+  background: transparent;
+  cursor: pointer;
+  border: 1px solid var(--very-light-gray);
+  padding-top: 10px;
+  color: var(--very-light-gray);
+ 
+}
+
+#attribution{
+  color: #000;
+  text-align: center;
+  transform: translateY(-70px);
+  
+}
