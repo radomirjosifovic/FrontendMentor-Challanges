@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root{
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+  background-color: var(--primary-color-pale-blue);
+  background-image: url("images/pattern-background-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+}
+button{display: block;}
+
+.img-mobile{display:none;}
+/* UTILITY */
+.btn{
+  padding: 4%;
+  border-radius: .7rem;
+  border: none;
+  background-color: var(--bright-blue);
+  color: var(--very-pale-blue);
+  width: 80%;
+  box-shadow: rgba(56, 41, 224, 0.22) 0px 19px 38px, rgba(56, 41, 224, 0.22) 0px 15px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Container */
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card styling */
+
+.card {
+  background-color: var(--very-pale-blue);
+  width: 450px;
+  box-shadow: rgba(114, 128, 167, 0.09) 0px 2px 1px, rgba(114, 128, 167, 0.09) 0px 2px 1px, rgba(114, 128, 167, 0.09) 0px 4px 2px, rgba(114, 128, 167, 0.09) 0px 16px 8px, rgba(114, 128, 167, 0.09) 0px 16px 1px;
+  border-radius: 1rem;
+  border: 2px solid var(--pale-blue);
+}
+
+/* Image Part */
+.card img {
+  border-radius: 1rem 1rem 0 0;
+  max-width: 100%;
+}
+
+/* Text Part */
+
+.card .text-part{
+  padding: 2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card .text-part h1{
+  color: var(--dark-blue);
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.card .text-part p{
+  color: var(--desaturated-blue);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+
+
+/* PRICING */
+
+.all-items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.all-items img{
+  padding-right: 1rem;
+}
+
+.price-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.annual h2{
+  color: var(--dark-blue);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.annual p{
+  color: var(--desaturated-blue);
+  font-size: 1rem;
+}
+
+.price-change a{
+  color: var(--bright-blue);
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+/* BUTTONS */
+
+.payment-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:first-child{
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.btn:first-child:hover{
+  opacity: 0.7;
+}
+
+.btn:nth-child(2){
+  background-color: var(--very-pale-blue);
+  color: var(--desaturated-blue);
+  box-shadow: none;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.btn:nth-child(2):hover{
+  color: var(--dark-blue);
+  font-weight: 700;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
