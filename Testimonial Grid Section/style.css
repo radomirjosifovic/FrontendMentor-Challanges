@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root{
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body{
+  background-color:  var(--light-grayish-blue);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+img{max-width: 100%;}
+
+/* Utility Classes */
+.bg-black-blue{
+  background-color: var(--very-dark-blackish-blue);
+}
+.bg-violet{
+  background-color: var(--moderate-violet);
+}
+.bg-grayish-blue{
+  background-color: var(--very-dark-grayish-blue);
+}
+.card-dark{
+  color: var(--light-grayish-blue);
+}
+.ver-grad{
+  color: var(--light-gray);
+  opacity: 50%;
+}
+.card-dark p{
+  color: var(--light-gray);
+  opacity: 70%;
+}
+.card-light{
+  color: var(--very-dark-blackish-blue);
+  
+}
+.card-light p{
+  color: var(--very-dark-grayish-blue);
+  opacity: 70%;
+}
+
+
+/* Avatar Border */
+.avatar-patrick{
+  border: 3px solid rgba(117, 65, 200, 0.9);
+}
+.avatar-daniel{
+  border: 3px solid rgba(207, 207, 207, 0.5) ;
+}
+
+@media screen and (min-width: 769px){
+
+ 
+
+  /* Grid Container */
+#grid-container{
+  max-width: 1140px;
+  grid-gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+  "sect1 sect1 sect2 sect5"
+  "sect3 sect4 sect4 sect5"
+}
+
+.sect1{grid-area: sect1;}
+.sect2{grid-area: sect2;}
+.sect3{grid-area: sect3;}
+.sect4{grid-area: sect4;}
+.sect5{grid-area: sect5;}
+
+
+/*Styling Card*/
+.card{
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.card-light{
+  -webkit-box-shadow: 2px 2px 8px 4px rgba(207,207,207,0.87); 
+  box-shadow: 2px 2px 8px 4px rgba(207,207,207,0.87);
+}
+
+
+/*Card Heading */
+.card-heading{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card-heading .user-avatar img{
+  border-radius: 50%;
+  width: 80%;
+}
+.card-heading .user-info h1{
+  font-size: 1.1rem;
+}
+
+
+/* Putting Quote Behind Text Using Z-Index */
+.card-heading .quote-img{
+  position: absolute;
+  top: 7px;
+  right: 5.5rem;
+  z-index: -1;
+}
+
+/* Card Text */
+.card .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.card .text h1{
+  margin: 10px 0;
+}
+
+.card .text p{
+  padding-bottom: 5px;
+}
+} /* End of desktop Query */
+
+@media screen and (max-width: 768px){
+
+
+/* Grid Container */
+#grid-container{
+  display: grid;
+  grid-template-columns: (1,1fr);
+  grid-template-rows: (1,1fr);
+  height: 100%;
+  grid-template-areas: 
+  "sect1"
+  "sect2"
+  "sect3"
+  "sect4"
+  "sect5";
+  
+}
+
+/*Styling Card*/
+.card{
+  border-radius: 10px;
+  padding: 1rem;
+  width: 85%;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.card-light{
+  -webkit-box-shadow: 2px 2px 8px 4px rgba(207,207,207,0.87); 
+  box-shadow: 2px 2px 8px 4px rgba(207,207,207,0.87);
+}
+
+
+/*Card Heading */
+.card-heading{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.card-heading .user-avatar img{
+  border-radius: 50%;
+  width: 80%;
+}
+.card-heading .user-info h1{
+  font-size: 1.1rem;
+}
+.quote-img{
+  position: absolute;
+  z-index: -1;
+  top: 10px;
+  right: 20px;
+}
+
+
+
+
+/* Card Text */
+.card .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.card .text h1{
+  margin: 10px 0;
+}
+
+.card .text p{
+  padding-bottom: 5px;
+}
+  
+  
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
