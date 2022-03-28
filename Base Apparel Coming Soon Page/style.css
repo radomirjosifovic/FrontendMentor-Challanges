@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root{
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+}
+/*
+### Gradients
+
+- Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Header */
+.logo{
+  position: absolute;
+  top: 4rem;
+  max-width: 100%;
+}
+#mobile-header{display: none;}
+
+/*General Container */
+.container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+/* Left Side of Container */
+.left-side{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(images/bg-pattern-desktop.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 5rem;
+  padding-right: 15%;
+  
+}
+.left-side .text-block h1{
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 5rem;
+  font-weight: 600;
+  letter-spacing: 1rem;
+  line-height: 5.5rem;
+  
+}
+.left-side .text-block span{
+  display: block;
+  color: var(--desaturated-red);
+  font-weight: 300;
+}
+.left-side .text-block p{
+  color: var(--desaturated-red);
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+
+
+/* Buttons and EMAIL */
+.left-side .text-block form{
+  margin-top: 3rem;
+  position: relative;
+}
+.left-side .text-block form input[type='email']{
+  height: 55px;
+  width: 100%;
+  border: 1px solid var(--desaturated-red);
+  border-radius: 50px;
+  padding-left: 3rem;
+  font-size: 1.5rem;
+  background: transparent;
+  outline: none;
+}
+
+.left-side .text-block form input[type='email']:focus{
+  border: 3px solid var(--soft-red); 
+  transition: all 0.2s ease-in-out;
+}
+
+.left-side .text-block form input[type='email']:hover{
+  border: 3px solid var(--soft-red); 
+}
+.left-side .text-block form input::placeholder{
+  color: var(--desaturated-red);
+  font-size: 1.4rem;
+  opacity: 0.6;
+}
+
+.left-side .text-block form button{
+  width: 100px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  height: 55px;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.left-side .text-block form button:hover{
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.4s ease-in-out;
+} 
+
+/* Error Icon with Text */
+.error-icon{
+  position: absolute;
+  top: 15px;
+  right: 120px;
+  height: 25px;
+  display: none;
+}
+.small{
+  color: var(--desaturated-red);
+  font-weight: 600;
+  position: absolute;
+  left: 35px;
+  display: none;
+  outline: none;
+}
+/* SHOW ON FOCUS */
+.left-side .text-block form input[type='email']:focus + .error-icon {
+  display: block;
+}
+.left-side .text-block form input[type='email']:focus + .small{
+  display: block;
+}
+
+/* Right Side */
+.right-side{
+  background: url(images/hero-desktop.jpg) no-repeat center center/cover
+}
+
+
+
+
+
+
+
