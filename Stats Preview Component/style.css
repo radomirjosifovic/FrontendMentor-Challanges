@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root{
+  --main-bg: hsl(233, 47%, 7%);
+  --card-bg: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+
+  --mainheading-stats: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-heading: hsla(0, 0%, 100%, 0.6);
+}
+
+/*General Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media  screen and (min-width: 501px) {
+  body{
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--main-bg);
+  color: #fff;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+/* Container */
+.container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+  "left right";
+  max-width: 1440px;
+  background-color: var(--soft-violet);
+}
+
+.card{grid-area: left;}
+.img-part{grid-area: right;}
+
+
+/* Styling the card - Left Side (TEXT PART) */
+.card{
+  background-color: var(--card-bg);
+  padding: 3rem;
+  border-top: 7px solid var(--card-bg);
+  border-bottom: 5px solid var(--card-bg);
+}
+
+.card-text-part{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-text-part h1{
+  margin-bottom: 1rem;
+  font-size: 3.2rem;
+}
+.card-text-part span{
+  color: var(--soft-violet);
+}
+.card-text-part p{
+  margin-bottom: 4rem;
+  font-size: 1.3rem;
+  padding-right: 7rem;
+  color: var(--main-paragraph)
+}
+
+/* Stats Part */
+.card .stats{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-block{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Lexend Deca", sans-serif;
+  padding-bottom: 2rem;
+}
+
+.stat-num{
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.stat-title{
+  margin-top: 5px;
+  color: var(--stat-heading);
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+/* Styling the Right side */
+
+.img-part{
+  background-color: var(--card-bg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-image: url(images/image-header-desktop.jpg);
+  mix-blend-mode: multiply;
+  
+}
+.overlay{
+  background-color: var(--soft-violet);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.3;
+}
+}
+
+@media  screen and (max-width: 500px) {
+  body{
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--main-bg);
+      color: #fff;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 50% 100%; 
+      grid-template-areas: 
+      "right"  
+      "left";  
+      background-color: var(--soft-violet);
+      width: 80%;
+      border: 1rem;
+    }
+    
+    .img-part{grid-area: right;}
+    .card{grid-area: left;}
+    
+
+    /* Styling the card - Left Side (TEXT PART) */
+
+.img-part{
+  background-image: url(images/image-header-mobile.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  position: relative;
+}
+
+.overlay{
+  position: absolute;
+  background-color: var(--soft-violet);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.3;
+}
+  
+
+/* Card */ 
+
+.card{
+  background-color: var(--card-bg);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.card-text-part h1{
+  font-size: 1.8rem;
+}
+.card-text-part span{
+  color: var(--soft-violet);
+}
+.card-text-part p {
+  color: var(--main-paragraph);
+  margin: 1rem;
+  font-size: 0.95rem;
+}
+
+
+
+.card .stats{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-block{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lexend Deca", sans-serif;
+  margin-bottom: 1rem
+  
+}
+
+.stat-num{
+  font-size: 1.2rem;
+}
+
+.stat-title{
+  margin-top: 5px;
+  color: var(--stat-heading);
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+
+
+
+
+
+
+
+}
+
+
+
+
+
+  
+
+
+
